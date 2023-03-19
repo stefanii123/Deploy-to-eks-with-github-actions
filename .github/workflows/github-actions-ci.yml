@@ -37,6 +37,9 @@ jobs:
         docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
 
+    - name: Change directory to terraform folder
+      run: cd terraform 
+
     - name: Terraform Init
       run: terraform init
     
