@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ose
+  labels:
+    app: ose
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ose
+  template:
+    metadata:
+      labels:
+        app: ose
+    spec:
+      containers:
+        - name: ose
+          image: 903263990211.dkr.ecr.us-east-1.amazonaws.com/ose:1.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
