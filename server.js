@@ -19,7 +19,7 @@ const ENV = 'DEV';
 const app = express();
 app.get('/', (req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello from from Primus Learning, this was awesome';
+  const msg = 'If life is so blue, select another colour from the rainbow...Ose says so!';
   res.send(getPage(msg));
 });
 
@@ -43,7 +43,7 @@ function getPage(message) {
     + "}\n"
     + "\n"
     + ".bgimg {\n"
-    + "  background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');\n"
+    + "  background-image: url('https://c0.wallpaperflare.com/preview/483/56/874/black-sand.jpg');\n"
     + "  height: 100%;\n"
     + "  background-position: center;\n"
     + "  background-size: cover;\n"
