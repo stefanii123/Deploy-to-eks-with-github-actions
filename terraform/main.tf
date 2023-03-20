@@ -39,7 +39,7 @@ module "vpc_example_complete-vpc" {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
     "kubernetes.io/role/internal-elb"             = 1
   }
-}
+
 
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
