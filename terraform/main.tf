@@ -13,9 +13,10 @@ resource "random_string" "suffix" {
   special = false
 }
 
-module "vpc" {
-  source  = "terraform-aws-modules/vpc/aws"
+module "vpc_example_complete-vpc" {
+  source  = "terraform-aws-modules/vpc/aws//examples/complete-vpc"
   version = "3.19.0"
+}
 
   name = "alt-vpc"
 
