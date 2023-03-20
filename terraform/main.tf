@@ -13,10 +13,9 @@ resource "random_string" "suffix" {
   special = false
 }
 
-module "vpc_example_complete-vpc" {
-  source  = "terraform-aws-modules/vpc/aws//examples/complete-vpc"
+module "vpc" {
+  source  = "terraform-aws-modules/vpc/aws"
   version = "3.19.0"
-}
 
   name = "alt-vpc"
 
@@ -39,7 +38,7 @@ module "vpc_example_complete-vpc" {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
     "kubernetes.io/role/internal-elb"             = 1
   }
-
+}
 
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
