@@ -42,9 +42,9 @@ jobs:
    steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: Change directory to terraform folder
-      run: cd terraform 
+      working-directory: ./terraform
+      run: |
+         cp .env .env
 
     - name: Terraform Init
       run: terraform init
