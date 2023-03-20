@@ -43,9 +43,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       working-directory: ./terraform
-      run: |
-         cp .env .env
-
+      
     - name: Terraform Init
       run: terraform init
     
