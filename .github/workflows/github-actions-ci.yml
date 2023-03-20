@@ -42,8 +42,10 @@ jobs:
    steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      working-directory: ./terraform
-      
+
+    - name: Change directory to terraform folder
+      run: cd ./terraform 
+
     - name: Terraform Init
       run: terraform init
     
